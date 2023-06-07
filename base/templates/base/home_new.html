@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="{% static 'base/styles.css' %}">
+        <!-- <link rel="stylesheet" href="../../static/base/styles.css">       -->
+        <script src="{% static 'base/home.js' %}"></script>
+        <!-- <script src="../../static/base/home.js"></script> -->
+    </head>
+    <body>        
+        <h1>Home page</h1>
+        <h2>Hello {{first_name}} {{last_name}}</h2>
+        <div class="navbar">
+            <span class="span-1">LOGO</span>
+            <button class="button-2" onclick="logout()">Logout</button>
+        </div>
+        <div class="content">
+            <div class="div-2">
+                <span class="span-2">Your to-do list</span>
+                <button class="button-2" onclick="show_add_task()">Add task</button>
+            </div>
+            <div class="div-3" id="add-task-div">
+                <input type="text" placeholder="Task title" class="input-1" id="add-task-title">
+                <input type="text" placeholder="Description" class="input-2" id="add-task-desc">
+                <button class="button-1" onclick="add_task()">Add</button>
+            </div>
+            <div class="div-4" id="todo-list">
+                
+            </div>            
+        </div>
+    </body>    
+</html>

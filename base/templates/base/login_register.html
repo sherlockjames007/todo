@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Login / Register</title>
+        <link rel="stylesheet" href="{% static 'base/styles.css' %}">
+        <link rel="stylesheet" href="../../static/base/styles.css">
+        <script src="{% static 'base/login_register.js' %}"></script>
+        <!-- <script src="../../static/base/"></script> -->
+    </head>
+    <body>
+        <div class="content">
+            {% if page == 'login' %}
+                <div class="div-1">
+                    <input class="input-1" type="email" placeholder="Email" required name="login_email" id="login_email">
+                    <input class="input-1" type="password" placeholder="Password" required name="login_password" id="login_password">
+                    <button class="button-1" onclick="login()">Login</button>
+                    <div class="div-2">
+                        <span>Don't have an account?</span>
+                        <a href="/register/">
+                            Sign up
+                        </a>
+                    </div>                    
+                </div>
+            {% else %}
+                <div class="div-1">
+                    <input class="input-1" type="text" placeholder="First name" required name="first_name" id="first_name">
+                    <input class="input-1" type="text" placeholder="Last name" required name="last_name" id="last_name">
+                    <input class="input-1" type="email" placeholder="Email" required name="register_email" id="register_email">
+                    <input class="input-1" type="password" placeholder="Password" required name="register_password" id="register_password">
+                    <button class="button-1" onclick="register()">Register</button>
+                    <div class="div-2">
+                        <span>Already have an account? </span>
+                        <a href="/login/">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </body>
+</html>

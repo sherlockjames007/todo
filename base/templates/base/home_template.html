@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Home</title>
+        <!-- <link rel="stylesheet" href="{% static 'base/styles.css' %}"> -->
+        <link rel="stylesheet" href="../../static/base/styles.css">      
+        <!-- <script src="{% static 'base/login_register.js' %}"></script> -->
+        <script src="../../static/base/home.js"></script>
+    </head>
+    <body>
+        <h1>Home page</h1>
+        <div class="navbar">
+            <span class="span-1">LOGO</span>
+            <button class="button-2" onclick="logout()">Logout</button>
+        </div>
+        <div class="content">
+            <div class="div-2">
+                <span class="span-2">Your to-do list</span>
+                <button class="button-2" onclick="show_add_task()">Add task</button>
+            </div>
+            <div class="div-3" id="add-task-div">
+                <input type="text" placeholder="Task title" class="input-1">
+                <input type="text" placeholder="Description" class="input-2">
+                <button class="button-1" onclick="add_task()">Add</button>
+            </div>
+            <div class="div-4">
+                <div class="div-5">
+                    <div class="div-6">
+                        <input type="checkbox">
+                        <span class="span-3">Task 1</span>
+                        <button class="button-3">Delete</button>
+                    </div>                  
+                    <span class="span-4">Description 1</span>
+                </div>
+                <div class="div-5">
+                    <div class="div-6">
+                        <input type="checkbox">
+                        <span class="span-3">Task 2</span>
+                        <button class="button-3">Delete</button>
+                    </div>                    
+                    <span class="span-4">Description 2</span>
+                </div>
+            </div>            
+        </div>
+    </body>    
+</html>
